@@ -6,9 +6,13 @@
 		<title><?php echo Configure::read('Site.title'); ?> | <?php echo $title_for_layout; ?></title>
 		<?php
 
+		$bootswatchTheme = 'bootswatch.min';
+		if (Configure::read('Bootswatch.theme')) {
+			$bootswatchTheme = Configure::read('Bootswatch.theme');
+		}
 		echo $this->Html->css(array(
 			'bootstrap',
-			'bootswatch.min',
+			$bootswatchTheme,
 			'custom',
 			'/croogo/css/thickbox',
 		));
@@ -25,7 +29,6 @@
 			'/croogo/js/jquery/jquery.tipsy',
 			'/croogo/js/jquery/jquery.elastic-1.6.1.js',
 			'/croogo/js/jquery/thickbox-compressed',
-
 			'/croogo/js/underscore-min',
 			'bootstrap.min.js',
 			'theme.js',
@@ -43,8 +46,8 @@
 					<div class="page-header" id="banner">
 					    <div class="row">
 					      	<div class="col-lg-2 col-md-2 ">
-					      		<?php echo $this->Html->image('cakephp_small.png', $options = array('class' =>'img-rounded', 'width' => '140px', 'height' => '140px')); ?>
-					      	</div>	
+					      		<?php echo $this->Html->image('vidyarthi_small.png', $options = array('class' =>'img-rounded', 'width' => '140px')); ?>
+					      	</div>
 					      	<div class="col-lg-10 col-md-10">
 					           <h1><?php echo Configure::read('Site.title'); ?></h1>
 					           <p class="lead"><?php echo Configure::read('Site.tagline'); ?></p>
@@ -55,14 +58,14 @@
 					<div class="row">
 						<?php echo $this->element('admin/breadcrumb'); ?>
 						<div id="inner-content" class="col-lg-8">
-							
+
 								<?php echo $this->Layout->sessionFlash(); ?>
-								<?php 
-									if ($this->Regions->blocks('region1')){ 
-										echo $this->Regions->blocks('region1'); 
+								<?php
+									if ($this->Regions->blocks('region1')){
+										echo $this->Regions->blocks('region1');
 									}
 								?>
-							
+
 							<div class="well">
 								<?php echo $this->fetch('content'); ?>
 							</div>
@@ -72,19 +75,19 @@
 							<?php echo $this->Regions->blocks('right'); ?>
 							</div>
 						</div>
-					</div>	
-					
-					
-		
+					</div>
+
+
+
 			<?php echo $this->element('footer'); ?>
 		</div>
 
 		<script type="text/javascript">
 
 			$(document).ready(function(){
-				
+
 				$( "#promo_discount" ).load( "<?php echo $this->base; ?>/promo_discount" );
-		       			
+
 		    });
 
 		</script>

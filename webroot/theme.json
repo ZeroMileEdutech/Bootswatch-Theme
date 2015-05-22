@@ -1,11 +1,11 @@
 {
-	"name" : "Flatly",
-	"description" : "Port of Flatly theme from http://bootswatch.com/flatly/ for Croogo",
+	"name" : "Bootswatch",
+	"description" : "All in one Bootswatch (http://bootswatch.com) theme for croogo",
 	"screenshot" : "screenshot.png",
 
-	"author" : "Sherwin Robles",
-	"authorEmail" : "sherwinrobles@gmail.com",
-	"authorUrl" : "http://github.com/sherwinrobles/Flatly-Theme",
+	"author" : "Rakesh Tembhurne",
+	"authorEmail" : "tj2point0@gmail.com",
+	"authorUrl" : "http://github.com/ZeroMileEduTech/Bootswatch-Theme",
 
 	"menus" : [
 		"main",
